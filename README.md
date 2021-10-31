@@ -1,5 +1,5 @@
 <h2>Majoo Teknologi Indonesia - POS Mini</h2>
-<p>svc-majoo-simple-pos-laravel merupakan Restfull API yang berguna untuk membuat aplikasi POS.</p>
+<p>svc-majoo-simple-pos-laravel merupakan Aplikasi POS yang dibuat secara Fullstack dengan menggunakan framework Laravel, library Jquery dan AJAX, yang mengadopsi software Arsiktektur monolithic, yang didalam nya terdapat user interface (Frontend) dan juga RESTfull API (Backend)</p>
 <p>Service ini dibuat dengan menggunakan bahasa pemrograman PHP (Framework Laravel) dan DBMS MySQL.</p>
 
 <p>Berikut ini syarat-syarat yang diperlukan untuk menjalankan service berikut.</p>
@@ -12,10 +12,12 @@
   <li>Text Editor (VScode, Sublime Text)</li>
   <li>Command Prompt Line/Terminal/Gitbash</li>
   <li>Composer</li>
+  <li>Node v14.17.5</li>
+  <li>NPM v6.14.14</li>
  </ol>
  
  <p>Berikut ini dokumentasi api yang akan digunakan, dokumentasi ini akan berubah tanpa adanya pemberitahuan sesuai dengan update pada aplikasi.</p>
- <a href="https://documenter.getpostman.com/view/9640381/Tzm2KJ1u" target="_blank">Dokumentasi API using Postman</a>
+ <a href="https://documenter.getpostman.com/view/9640381/UVByHUxx" target="_blank">Dokumentasi API using Postman</a>
  <p><i>*</i> Menu pelanggan, user, transaksi dan lapoaran pada hak akses admin belum tersedia</p>
  <p><i>*</i> Register, Verify, Login untuk pelanggan belum tersedia</p>
  <p><i>*</i> Checkout pada hak akses pelanggan belum tersedia</p>
