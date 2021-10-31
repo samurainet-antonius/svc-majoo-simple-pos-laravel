@@ -22,6 +22,9 @@
  <p><i>*</i> Register, Verify, Login untuk pelanggan belum tersedia</p>
  <p><i>*</i> Checkout pada hak akses pelanggan belum tersedia</p>
  
+ <p>Untuk demo aplikasi dapat dilhat pada link berikut.</p>
+ <a href="https://majoo-pos-mini.pandalas.com/">Demo Aplikasi</a>
+ 
  <h3>Fitur POS Mini Majoo v1.0</h3>
  <br/>
 <b>Admin</b>
@@ -53,3 +56,5 @@
 </ol>
 
 <p>Terima Kasih semoga bermanfaat.</p>
+
+<p><i>*Sebagai catatan aplikasi ini harus koneksi dengan internet karena menggunakan CDN untuk Bootstrap, Select2 dan CKEDITOR</i></p>
