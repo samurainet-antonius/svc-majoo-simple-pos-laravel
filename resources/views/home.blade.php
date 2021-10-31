@@ -48,7 +48,7 @@
                 let data = response.data;
                 let row = '';
                 $.each(data,(key,value) =>{
-                    row += `<div class="col"><div class="card shadow-sm"><img src="/images/produk/${value['foto_produk']}" class="img-responsive"><div class="card-body"><h3 class="card-title text-center">${value['nama_produk']}</h3><div class="text-center mt-3 mb-3"><span><b>Rp. 2.750.000</b></span></div><p class="card-text">${value['deskripsi_produk']}</p><div class="d-flex justify-content-between align-items-center"><div class="btn-group"><button type="button" class="btn btn-sm btn-warning">View</button><button type="button" class="btn btn-sm btn-primary">Beli</button></div><small class="text-muted">${value['nama_kategori']}</small></div></div></div></div>`;
+                    row += `<div class="col"><div class="card shadow-sm"><img src="/images/produk/${value['foto_produk']}" class="img-responsive"><div class="card-body"><h3 class="card-title text-center">${value['nama_produk']}</h3><div class="text-center mt-3 mb-3"><span><b>${formatRupiah(value['harga_produk'],'Rp. ')}</b></span></div><p class="card-text">${value['deskripsi_produk'].substr(0,200)}...</p><div class="d-flex justify-content-between align-items-center"><div class="btn-group"><button type="button" class="btn btn-sm btn-warning">View</button><button type="button" class="btn btn-sm btn-primary">Beli</button></div><small class="text-muted">${value['nama_kategori']}</small></div></div></div></div>`;
                 });
                 $("#produk").html(row);
 
@@ -62,5 +62,10 @@
                 }
             }
       })
+
+      function formatRupiah(angka, prefix){
+            let nominal = parseFloat(angka);
+            return prefix+nominal.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+	    }
   </script>
 @endsection

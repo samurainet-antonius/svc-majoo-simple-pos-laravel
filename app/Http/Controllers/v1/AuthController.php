@@ -33,6 +33,20 @@ class AuthController extends Controller
         $credentials = $request->only('email', 'password');
 
         try {
+
+            $user = User::where([
+                ['email',$request->email],
+                ['role', $request->role]
+            ])->first();
+
+
+            if(!$user){
+                return response()->json([
+                    'code' => 400,
+                    'message' => 'Email atau password tidak sesuai.'
+                ], 400);
+            }
+
             if (! $token = JWTAuth::attempt($credentials)) {
                 return response()->json([
                     'code' => 400,

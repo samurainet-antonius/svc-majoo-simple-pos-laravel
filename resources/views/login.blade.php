@@ -38,6 +38,8 @@
             <p id="password" class="text-danger"></p>
         </div>
 
+        <input type="hidden" name="role" value="0">
+
         <button class="mt-3 w-100 btn btn-lg btn-primary" type="submit">Login</button>
     </form>
 </div>

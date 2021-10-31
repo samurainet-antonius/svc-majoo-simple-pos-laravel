@@ -3,7 +3,18 @@
 
 <h1>Kategori</h1>
 <hr/>
-<a href="{{ route('add-kategori') }}" class="btn btn-primary btn-sm mb-3">Tambah</a>
+<div class="row">
+    <div class="col-md-1">
+        <select name="filter" id="filter" class="form-control">
+            <option value="2" selected>2</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+        </select>
+    </div>
+    <div class="col-md-11">
+        <a href="{{ route('add-kategori') }}" class="float-right btn btn-primary mb-3">Tambah</a>
+    </div>
+</div>
 <div class="table-responsive">
     <table class="table table-bordered">
         <thead>
@@ -42,7 +53,7 @@
                 $("#kategori").html(row);
 
                 for(let i = 1; i<= total_page; i++){
-                    page += `<li class="page-item"><a class="page-link" onclick="paginate(${i})" href="#">${i}</a></li>`;
+                    page += `<li class="page-item"><a class="page-link" onclick="paginate(${i},${limit})" href="#">${i}</a></li>`;
                 }
                 $("#pagination").html(page);
 
@@ -64,11 +75,17 @@
         })
     }
 
-    getCategories();
+    var limit = $("#filter").val();
+    getCategories(0,limit);
 
-    function paginate(page){
-        getCategories(page,4);    
+    function paginate(page,limit){
+        getCategories(page,limit);    
     }
+
+    $("#filter").on('change',function(){
+       var limit = $(this).val();
+        getCategories(1,limit);    
+   })
 
     function hapus(uuid){
         if (confirm('Apakah anda yakin akan menghapus data ini?')){
