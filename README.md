@@ -1,65 +1,55 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<h2>Majoo Teknologi Indonesia - POS Mini</h2>
+<p>svc-majoo-simple-pos-laravel merupakan Aplikasi POS yang dibuat secara Fullstack dengan menggunakan framework Laravel, library Jquery dan AJAX, yang mengadopsi software Arsiktektur monolithic, yang didalam nya terdapat user interface (Frontend) dan juga RESTfull API (Backend)</p>
+<p>Service ini dibuat dengan menggunakan bahasa pemrograman PHP (Framework Laravel) dan DBMS MySQL.</p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<p>Berikut ini syarat-syarat yang diperlukan untuk menjalankan service berikut.</p>
+<ol>
+  <li>PHP >= 7.4.9</li>
+  <li>OpenSSL PHP Extension</li>
+  <li>PDO PHP Extension</li>
+  <li>Mbstring PHP Extension</li>
+  <li>DBMS MySQL</li>
+  <li>Text Editor (VScode, Sublime Text)</li>
+  <li>Command Prompt Line/Terminal/Gitbash</li>
+  <li>Composer</li>
+  <li>Node v14.17.5</li>
+  <li>NPM v6.14.14</li>
+ </ol>
+ 
+ <p>Berikut ini dokumentasi api yang akan digunakan, dokumentasi ini akan berubah tanpa adanya pemberitahuan sesuai dengan update pada aplikasi.</p>
+ <a href="https://documenter.getpostman.com/view/9640381/UVByHUxx" target="_blank">Dokumentasi API using Postman</a>
+ <p><i>*</i> Menu pelanggan, user, transaksi dan lapoaran pada hak akses admin belum tersedia</p>
+ <p><i>*</i> Register, Verify, Login untuk pelanggan belum tersedia</p>
+ <p><i>*</i> Checkout pada hak akses pelanggan belum tersedia</p>
+ 
+ <h3>Fitur POS Mini Majoo v1.0</h3>
+ <br/>
+<b>Admin</b>
+<ol>
+<li>Login</li>
+<li>Logout</li>
+<li>Create Category</li>
+<li>Read Category</li>
+<li>Update Category</li>
+<li>Delete Category</li>
+<li>Create Products</li>
+<li>Read Products</li>
+<li>Update Products</li>
+<li>Delete Products</li>
+</ol>
+<br/>
+<p>Pada halaman login yang ada di home digunakan untuk login sebagai admin saja dengan credentials sebagai berikut.</p>
+<ol>
+    <li>email : admin@admin.com</li>
+    <li>password : admin1234</li>
+</ol>
 
-## About Laravel
+<p>Berikut langkah-langkah yang harus dilakukan setelah mengcloning repository ini.</p>
+<ol>
+    <li>Jalankan perintah <code>composer install</code> pada terminal atau cmd yang direktorinya berada pada folder project yang sudah diclone</li>
+    <li>Setelah itu jalankan <code>npm install && npm run dev</code></li>
+    <li>Setelah kedua perintah diatas selesai, selanjutnya melakukan migrations beserta seeder dengan perinta <code>php artisan migrate --seed</code></li>
+    <li>Terakhir jalankan perintah <code>php artisan serve</code> untuk menjalakan aplikasi tersebut.</li>
+</ol>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<p>Terima Kasih semoga bermanfaat.</p>
