@@ -20,10 +20,10 @@ class CreateProdukTable extends Migration
             $table->foreign('kategori_id')->references('id')->on('kategori')->onDelete('cascade');
             $table->string('nama_produk',200);
             $table->text('deskripsi_produk');
-            $table->float('harga_produk');
+            $table->string('harga_produk',10);
             $table->string('foto_produk',200);
             $table->string('url_produk',200);
-            $table->index(['kategori_id', 'nama_produk','harga_produk']);
+            $table->index(['nama_produk','harga_produk']);
             $table->uuid('uuid');
             $table->timestamps();
         });

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\v1\KategoriController;
 use App\Http\Controllers\v1\ProdukController;
 use App\Http\Controllers\v1\AuthController;
+use App\Http\Controllers\v1\ReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,7 @@ Route::group(['prefix' => 'v1', 'middleware' => 'cors'],function(){
 
         Route::post('/login',[AuthController::class,'login']);
 
+        Route::get('/token',[AuthController::class,'getAuthenticatedUser'])->middleware('jwt.verify');
         Route::get('/logout',[AuthController::class,'logout'])->middleware('jwt.verify');
         
     });
@@ -50,6 +52,12 @@ Route::group(['prefix' => 'v1', 'middleware' => 'cors'],function(){
         Route::post('/add',[ProdukController::class,'add'])->middleware('jwt.verify');
         Route::put('/edit/{uuid}',[ProdukController::class,'edit'])->middleware('jwt.verify');
         Route::delete('/delete/{uuid}',[ProdukController::class,'delete'])->middleware('jwt.verify');
+        
+    });
+
+    Route::group(['prefix' => 'report'],function(){
+
+        Route::get('/',[ReportController::class,'show'])->middleware('jwt.verify');
         
     });
     

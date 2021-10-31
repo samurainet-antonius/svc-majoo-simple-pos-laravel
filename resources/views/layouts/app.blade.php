@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{{ env('APP_NAME') }}</title>
 
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+    <link rel="shortcut icon" href="https://majoo.id/favicon.png" />
     <script src="{{ mix('js/app.js') }}"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script>const url_api = "<?= env('URL_API'); ?>";</script>
 
 </head>
 <body>
@@ -22,17 +24,10 @@
                 Majoo Teknologi Indonesia
             </a>
 
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <!-- <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">About</a></li> -->
-            </ul>
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"></ul>
 
             <div class="text-end">
-            <button type="button" class="btn btn-outline-light me-2">Login</button>
-            <button type="button" class="btn btn-warning">Sign-up</button>
+                <a href="{{ route('login') }}" class="btn btn-outline-light me-2">Login</a>
             </div>
         </div>
         </div>
@@ -42,6 +37,12 @@
     <main>
         @yield('content')
     </main>
+
+    <footer class="footer mt-auto py-3 bg-white text-center">
+        <div class="container">
+            <span class="text-muted">2019 &copy; PT Majoo Teknologi Indonesia.</span>
+        </div>
+    </footer>
 
 </body>
 </html>

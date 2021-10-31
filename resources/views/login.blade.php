@@ -38,8 +38,7 @@
             <p id="password" class="text-danger"></p>
         </div>
 
-        <button class="mt-3 w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-        <p class="mt-2 mb-3 text-muted">© 2017–2021</p>
+        <button class="mt-3 w-100 btn btn-lg btn-primary" type="submit">Login</button>
     </form>
 </div>
 <script>
@@ -65,7 +64,7 @@
             },success:function(response){
                 let accessToken = JSON.stringify(response);
                 localStorage.setItem('token',accessToken);
-                toastr.options ={"closeButton" : true,"progressBar" : true,timeOut: 1000,}
+                toastr.options ={"closeButton" : true,"progressBar" : true,timeOut: 1000,"positionClass": "toast-bottom-right"}
                 toastr.options.onHidden = function() { window.location.href = '/admin/home'; }
   		        toastr.success("Anda berhasil login.");
                   
@@ -73,7 +72,7 @@
             },error:function(xhr){
                 let response = xhr.responseJSON;
                 if(response.code == 400){
-                    toastr.options ={"closeButton" : true,"progressBar" : true,timeOut: 1000,}
+                    toastr.options ={"closeButton" : true,"progressBar" : true,timeOut: 1000,"positionClass": "toast-bottom-right"}
                     toastr.options.onHidden = function() { window.location.href = '/login'; }
   		            toastr.warning(response.message);
                 }else{

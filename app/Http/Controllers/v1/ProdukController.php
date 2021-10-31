@@ -84,7 +84,7 @@ class ProdukController extends Controller
         $rules = [
             'kategori' => 'required',
             'nama_produk' => 'required|unique:produk',
-            'harga_produk' => 'required',
+            'harga_produk' => 'required|numeric',
             'deskripsi_produk' => 'required',
             'foto_produk' => 'required|image|mimes:jpeg,png,jpg,gif,svg',
             'url_produk' => 'required|unique:produk',
@@ -166,7 +166,7 @@ class ProdukController extends Controller
         $rules = [
             'kategori' => 'required',
             'nama_produk' => 'required'.$uniqueNama,
-            'harga_produk' => 'required',
+            'harga_produk' => 'required|numeric',
             'deskripsi_produk' => 'required',
             'foto_produk' => $validationFotoProduk,
             'url_produk' => 'required'.$uniqueUrl,

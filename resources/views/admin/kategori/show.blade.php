@@ -67,7 +67,7 @@
     getCategories();
 
     function paginate(page){
-        getCategories(page,1);    
+        getCategories(page,4);    
     }
 
     function hapus(uuid){
