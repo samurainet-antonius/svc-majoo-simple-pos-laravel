@@ -58,3 +58,4 @@
 <p>Terima Kasih semoga bermanfaat.</p>
 
 <p><i>*Sebagai catatan aplikasi ini harus koneksi dengan internet karena menggunakan CDN untuk Bootstrap, Select2 dan CKEDITOR</i></p>
+<p><i>*Pada bagian edit produk untuk form kategori dan deskripsi kadang terdapat bug, mohon apabila ada solusi bisa menambahkan. </i></p>
